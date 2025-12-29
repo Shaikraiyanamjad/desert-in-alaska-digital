@@ -1,13 +1,32 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Helmet } from "react-helmet-async";
+import Layout from "@/components/Layout";
+import HeroSection from "@/components/home/HeroSection";
+import ServicesSection from "@/components/home/ServicesSection";
+import AboutSection from "@/components/home/AboutSection";
+import CTASection from "@/components/home/CTASection";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <>
+      <Helmet>
+        <title>Desert In Alaska Corp | Commercial Fire Suppression & HVAC Services | Detroit, MI</title>
+        <meta
+          name="description"
+          content="Metro Detroit's trusted commercial fire suppression, kitchen exhaust, and HVAC contractor since 1997. Licensed & certified for restaurants, industrial facilities, and commercial properties."
+        />
+        <meta
+          name="keywords"
+          content="fire suppression Detroit, commercial kitchen exhaust, HVAC services Michigan, fire safety systems, kitchen hood installation"
+        />
+        <link rel="canonical" href="https://www.desertinalaska.com" />
+      </Helmet>
+      <Layout>
+        <HeroSection />
+        <ServicesSection />
+        <AboutSection />
+        <CTASection />
+      </Layout>
+    </>
   );
 };
 
